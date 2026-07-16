@@ -55,12 +55,12 @@ DR="$(codesign -d -r- "$DIST_APP" 2>&1 | sed -n '/^designated =>/p')"
 [ "$DR" = 'designated => identifier "com.frase.app"' ] \
     || fail "dist App 的 DR 不正确: ${DR:-<implicit>}"
 
-ditto -c -k --sequesterRsrc --keepParent "$DIST_APP" "$ZIP_PATH"
-unzip -tq "$ZIP_PATH" >/dev/null
+"$ROOT/tools/package-dmg.sh"
+DMG_PATH="$DIST_DIR/dimmi.dmg"
 
 ARCHS="$(lipo -archs "$DIST_APP/Contents/MacOS/dimmi")"
 log "已验证签名与压缩包"
 log "DR: $DR"
 log "架构: $ARCHS"
 log "App: $DIST_APP"
-log "ZIP: $ZIP_PATH"
+log "DMG: $DMG_PATH"

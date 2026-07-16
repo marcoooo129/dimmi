@@ -5,5 +5,6 @@
 window.DIMMI_SITE_CONFIG = {
   reviewMode: false,
   repositoryUrl: "https://github.com/marcoooo129/dimmi",
-  releaseUrl: "https://github.com/marcoooo129/dimmi/releases/latest"
+  releaseUrl: "https://github.com/marcoooo129/dimmi/releases/latest",
+  downloadUrl: "https://github.com/marcoooo129/dimmi/releases/latest/download/dimmi.dmg"
 };

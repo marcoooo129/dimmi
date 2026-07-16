@@ -4,7 +4,8 @@
   const config = window.DIMMI_SITE_CONFIG || {};
   const targets = {
     repository: config.repositoryUrl,
-    release: config.releaseUrl
+    release: config.releaseUrl,
+    download: config.downloadUrl
   };
 
   document.querySelectorAll("[data-site-link]").forEach((link) => {
