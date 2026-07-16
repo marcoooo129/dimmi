@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# 审阅通过并补齐 canonical / 社交卡片后再允许索引。

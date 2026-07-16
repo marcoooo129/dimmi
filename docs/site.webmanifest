@@ -1,0 +1,17 @@
+{
+  "name": "dimmi",
+  "short_name": "dimmi",
+  "description": "划词即翻的原生 macOS 菜单栏翻译器",
+  "lang": "zh-CN",
+  "start_url": "./",
+  "display": "browser",
+  "background_color": "#1e1916",
+  "theme_color": "#5f5359",
+  "icons": [
+    {
+      "src": "assets/marketing/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

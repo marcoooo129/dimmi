@@ -1,0 +1,54 @@
+/* Shiny Text (流光文字) */
+.shiny-text {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 250, 242, 0.66) 40%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 250, 242, 0.66) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: shine 4s linear infinite;
+  display: inline-block;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+/* Blur Text (模糊进入) */
+.blur-text-element {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(8px);
+  transform: translate3d(0, 8px, 0);
+  transition: opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+              transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, filter, transform;
+}
+
+.blur-text-element.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Magnet Button (磁吸按钮) */
+.magnet-wrapper {
+  display: inline-flex;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.magnet-wrapper.active {
+  transition: none; /* 拖拽时取消动画，保持跟手 */
+}

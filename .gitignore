@@ -1,0 +1,36 @@
+# 构建产物（全部可再生；见 CLAUDE.md 构建纪律）
+build/
+build-*/
+build_*/
+build-release/
+dist/
+*.xcresult
+default.profraw
+*.profraw
+*.log
+
+# 本地签名材料 —— 私钥绝不入库
+tools/tmp/
+*.pem
+*.csr
+*.p12
+.env
+.env.*
+!.env.example
+
+# 个人开发期文件
+dev-diary/
+docs/BUILD_PROMPT.md
+.claude/
+.cursor/
+screenshot_*.png
+docs/assets/onboarding.png
+docs/assets/menubar.png
+
+# macOS / Xcode
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+.swiftpm/
+.build/

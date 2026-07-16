@@ -1,0 +1,100 @@
+name: Frase
+options:
+  bundleIdPrefix: com.frase
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+  generateEmptyDirectories: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "15.0"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "-"
+    ENABLE_HARDENED_RUNTIME: YES
+    GENERATE_INFOPLIST_FILE: NO
+
+packages:
+  KeyboardShortcuts:
+    url: https://github.com/sindresorhus/KeyboardShortcuts
+    from: "2.0.0"
+  PhosphorSwift:
+    url: https://github.com/phosphor-icons/swift
+    from: "2.0.0"
+
+targets:
+  dimmi:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+      - path: Resources/Assets.xcassets
+        type: file
+        buildPhase: resources
+      # 字体整目录拷进 bundle 的 Resources/Fonts —— 必须和 Info.plist 的
+      # ATSApplicationFontsPath = "Fonts" 配对，缺任何一半字体都不生效
+      # （此前两半都缺：.custom("Inter Variable") 一直在静默回退系统字体）。
+      - path: Resources/Fonts
+        type: folder
+        buildPhase: resources
+    info:
+      path: Resources/Info.plist
+      properties:
+        CFBundleName: dimmi
+        CFBundleDisplayName: dimmi
+        CFBundleIdentifier: com.frase.app
+        CFBundleVersion: "1"
+        CFBundleShortVersionString: "0.1.0"
+        CFBundlePackageType: APPL
+        LSMinimumSystemVersion: "15.0"
+        LSUIElement: true
+        NSHighResolutionCapable: true
+        NSPrincipalClass: NSApplication
+        NSAppleEventsUsageDescription: "dimmi 需要使用 AppleEvents，以便在部分应用中读取你主动选中的文字。"
+        NSHumanReadableCopyright: "© 2026 Frase"
+        # macOS 专用字体注册 key（不是 iOS 的 UIAppFonts）：
+        # 指向 bundle Resources 下的相对目录，配合 project.yml 里的
+        # Resources/Fonts folder 资源，Poppins 才会注册进 NSFontManager。
+        ATSApplicationFontsPath: "Fonts"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.frase.app
+        MARKETING_VERSION: "0.1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGN_ENTITLEMENTS: Resources/dimmi.entitlements
+        ENABLE_APP_SANDBOX: NO
+        ENABLE_HARDENED_RUNTIME: YES
+        SWIFT_STRICT_CONCURRENCY: minimal
+    dependencies:
+      - package: KeyboardShortcuts
+      - package: PhosphorSwift
+
+  dimmiTests:
+    type: bundle.unit-test
+    platform: macOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: Tests
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.frase.app.tests
+        GENERATE_INFOPLIST_FILE: YES
+    dependencies:
+      - target: dimmi
+
+schemes:
+  dimmi:
+    build:
+      targets:
+        dimmi: all
+        dimmiTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      gatherCoverageData: true
+      targets:
+        - name: dimmiTests
