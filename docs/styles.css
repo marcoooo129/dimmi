@@ -1828,6 +1828,20 @@ a {
   .trigger-demo {
     inset-inline: 20px;
     bottom: 20px;
+    align-items: flex-start;
+    padding-top: 80px;
+  }
+
+  .demo-text {
+    padding: 0 20px;
+    font-size: 20px;
+  }
+
+  .demo-lang-selector {
+    top: 12px;
+    right: 12px;
+    transform: scale(0.85);
+    transform-origin: top right;
   }
 
   .demo-selection {
