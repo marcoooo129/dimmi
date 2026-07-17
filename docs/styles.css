@@ -1827,16 +1827,17 @@ a {
   }
 
   .trigger-demo {
-    inset-inline: 20px;
-    bottom: 20px;
-    align-items: flex-start;
-    padding-top: 50px;
-    min-height: 380px;
+    inset-inline: 15px;
+    bottom: 15px;
+    align-items: flex-end;
+    padding-bottom: 80px;
+    min-height: 420px;
   }
 
   .demo-text {
     padding: 0 10px;
-    font-size: 22px;
+    font-size: 20px;
+    margin-bottom: 20px;
   }
 
   .demo-translation-card {
@@ -1857,6 +1858,19 @@ a {
   .translation-result {
     font-size: 18px !important;
     line-height: 1.4 !important;
+  }
+
+  .native-badge {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-top: 24px !important;
+    padding: 16px 12px !important;
+    font-size: 16px !important;
+    display: inline-block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .demo-lang-selector {
