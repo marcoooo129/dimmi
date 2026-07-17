@@ -41,9 +41,6 @@ export default function Lanyard({
 
   return (
     <div className="lanyard-wrapper">
-      <div style={{ position: 'absolute', top: 0, left: 0, color: 'white', background: 'red', zIndex: 9999, padding: '10px' }}>
-        Lanyard Rendered
-      </div>
       <Canvas
         camera={{ position: position, fov: fov }}
         dpr={[1, isMobile ? 1.5 : 2]}
@@ -175,9 +172,10 @@ function Band({
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
 
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
+  // 绳长 1 → 0.6：挂带缩短约四成，卡片自然挂得更高，不压到下方窗口
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 0.6]);
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 0.6]);
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 0.6]);
   useSphericalJoint(j3, card, [
     [0, 0, 0],
     [0, 1.5, 0]

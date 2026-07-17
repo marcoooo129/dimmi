@@ -1026,17 +1026,23 @@ a {
   position: relative;
 }
 
+/* 吊坠卡片：铺满容器宽度，卡片才能被拖到左边而不被画布边界裁掉
+   （之前 width:50% 靠右，一拖出那半边就被切）。
+   高度限定 + top 上提，避免盖住下方的设置/历史窗口。 */
 #lanyard-root {
   position: absolute;
-  top: -80px;
-  right: -5%;
-  width: 50%;
-  height: 600px;
+  top: -150px;
+  left: 0;
+  right: 0;
+  height: 500px;   /* 底边要留在下方展示台之上：画布带 pointer-events，压到就会挡住窗口悬停 */
   z-index: 20;
   pointer-events: none;
 }
 
+/* 关键：组件自带的 .lanyard-wrapper 是 height:100vh，会溢出 #lanyard-root
+   一路盖到下面的窗口上。必须压回 100%，让它老实待在容器里。 */
 #lanyard-root .lanyard-wrapper {
+  height: 100%;
   pointer-events: auto;
 }
 
@@ -1044,9 +1050,9 @@ a {
   #lanyard-root {
     position: relative;
     top: 0;
+    left: 0;
     right: 0;
-    width: 100%;
-    height: 400px;
+    height: 380px;
     margin-top: 2rem;
   }
 }
