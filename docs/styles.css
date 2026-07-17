@@ -1375,8 +1375,9 @@ a {
 .release-actions {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 12px;
+  text-align: right;
 }
 
 .release-size,
@@ -1921,6 +1922,11 @@ a {
   .release-card {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .release-actions {
+    align-items: flex-start;
+    text-align: left;
   }
 
   .release-actions .button {
