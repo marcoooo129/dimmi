@@ -41,6 +41,9 @@ export default function Lanyard({
 
   return (
     <div className="lanyard-wrapper">
+      <div style={{ position: 'absolute', top: 0, left: 0, color: 'white', background: 'red', zIndex: 9999, padding: '10px' }}>
+        Lanyard Rendered
+      </div>
       <Canvas
         camera={{ position: position, fov: fov }}
         dpr={[1, isMobile ? 1.5 : 2]}
