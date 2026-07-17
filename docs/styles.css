@@ -1829,25 +1829,26 @@ a {
   .trigger-demo {
     inset-inline: 15px;
     bottom: 15px;
-    align-items: flex-end;
-    padding-bottom: 80px;
-    min-height: 420px;
+    align-items: flex-start;
+    padding-top: 85px;
+    min-height: 400px;
   }
 
   .demo-text {
     padding: 0 10px;
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .demo-translation-card {
     top: auto !important;
-    bottom: 20px !important;
+    bottom: 15px !important;
     left: 50% !important;
-    transform: translate(-50%, 10px) !important;
-    width: calc(100% - 30px) !important;
+    transform: translate(-50%, 0) !important;
+    width: calc(100% - 24px) !important;
     min-width: 0 !important;
-    max-width: 360px !important;
+    max-width: 340px !important;
     margin: 0 !important;
   }
   
