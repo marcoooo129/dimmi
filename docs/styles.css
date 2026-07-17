@@ -229,6 +229,13 @@ a {
   gap: 8px;
 }
 
+/* 隐私页的导航只有两个子元素（品牌 + 返回按钮），没有中间的 nav-links。
+   套用主站的三列网格会让按钮落进中间那个 auto 列、右边空一整列，
+   看起来就是"按钮卡在中间"。这里按实际子元素数量给两列。 */
+.legal-page .nav {
+  grid-template-columns: 1fr auto;
+}
+
 .button {
   min-height: 48px;
   display: inline-flex;

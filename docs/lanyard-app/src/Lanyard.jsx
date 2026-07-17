@@ -33,8 +33,18 @@ export default function Lanyard({
 }) {
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
 
+  // 挂点横向偏移：画布现在是满宽的（为了卡片拖到左边不被裁），而卡片默认挂在
+  // 画布正中 —— 那会把它从原本的右侧位置挪到正中。这里把挂点右移，让卡片回到
+  // 原位（6.0 由几何算得：原画布中心距容器中心 354px ÷ 59.08 px/单位 ≈ 6）。
+  // 窄屏画布变矮变窄，6 个单位会跑出画面，故回到 0（居中）。
+  const getAnchorX = () => (typeof window !== 'undefined' && window.innerWidth >= 1024 ? 6 : 0);
+  const [anchorX, setAnchorX] = useState(getAnchorX);
+
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+      setAnchorX(getAnchorX());
+    };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -52,6 +62,7 @@ export default function Lanyard({
           <Physics gravity={gravity} timeStep={isMobile ? 1 / 30 : 1 / 60}>
             <Band
               isMobile={isMobile}
+              anchorX={anchorX}
               frontImage={frontImage}
               backImage={backImage}
               imageFit={imageFit}
@@ -99,6 +110,7 @@ function Band({
   maxSpeed = 50,
   minSpeed = 0,
   isMobile = false,
+  anchorX = 0,
   frontImage = null,
   backImage = null,
   imageFit = 'cover',
@@ -221,7 +233,7 @@ function Band({
 
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[anchorX, 4, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
