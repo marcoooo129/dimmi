@@ -1806,6 +1806,7 @@ a {
     min-height: 320px;
     margin-top: 14px;
     padding: 24px;
+    padding-bottom: 90px;
   }
 
   .feature-card:first-child {
@@ -1829,12 +1830,33 @@ a {
     inset-inline: 20px;
     bottom: 20px;
     align-items: flex-start;
-    padding-top: 80px;
+    padding-top: 50px;
+    min-height: 380px;
   }
 
   .demo-text {
-    padding: 0 20px;
-    font-size: 20px;
+    padding: 0 10px;
+    font-size: 22px;
+  }
+
+  .demo-translation-card {
+    top: auto !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    transform: translate(-50%, 10px) !important;
+    width: calc(100% - 30px) !important;
+    min-width: 0 !important;
+    max-width: 360px !important;
+    margin: 0 !important;
+  }
+  
+  .demo-translation-card.show {
+    transform: translate(-50%, 0) !important;
+  }
+
+  .translation-result {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
   }
 
   .demo-lang-selector {
