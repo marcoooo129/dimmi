@@ -51,9 +51,7 @@ body {
   background:
     linear-gradient(180deg, #4f4649 0%, #5f514c 30%, #3b302b 66%, #1e1916 100%);
   color: var(--text-primary);
-  font-family:
-    "Outfit", -apple-system, BlinkMacSystemFont, "SF Pro Display",
-    "SF Pro Text", "PingFang SC", "Hiragino Sans GB", sans-serif;
+  font-family: "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
@@ -337,8 +335,8 @@ a {
 .final-cta h2,
 .legal-hero h1 {
   margin: 0;
-  font-family: "Instrument Serif", ui-serif, Georgia, serif;
-  font-weight: 400;
+  font-family: "Clash Display", "Satoshi", -apple-system, sans-serif;
+  font-weight: 600;
   letter-spacing: 0;
   line-height: 1.04;
 }
@@ -449,7 +447,8 @@ a {
 }
 
 .article-copy p {
-  font-family: "Instrument Serif", ui-serif, Georgia, serif;
+  font-family: "Satoshi", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.72;
 }
@@ -879,9 +878,10 @@ a {
 
 .demo-text {
   color: rgba(255, 250, 242, 0.8);
-  font-family: "Instrument Serif", ui-serif, Georgia, serif;
+  font-family: "Clash Display", "Satoshi", -apple-system, sans-serif;
   font-size: 28px;
-  letter-spacing: 0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   cursor: text;
 }
 
