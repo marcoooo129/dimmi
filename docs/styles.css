@@ -885,15 +885,18 @@ a {
 
 .demo-text {
   color: rgba(255, 250, 242, 0.9);
-  font-family: "Tiempos Text", "Charter", "Georgia", serif;
-  font-size: 32px;
-  line-height: 1.45;
+  font-family: "Charter", "Georgia", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
   font-weight: 400;
   text-align: center;
-  max-width: 85%;
-  letter-spacing: -0.01em;
+  width: 100%;
+  max-width: 680px;
+  box-sizing: border-box;
+  padding: 0 80px;
+  margin: 0 auto;
+  letter-spacing: 0.01em;
   cursor: text;
-  padding: 0 20px;
 }
 
 .demo-text::selection {
