@@ -228,7 +228,22 @@
               <p>Trigger in browsers, docs, chats, and editors. The popup stays near your cursor, dismissing when you're done.</p>
             </div>
             <div class="trigger-demo" aria-hidden="false" id="interactive-demo-area">
-              <div id="option-wheel-root" style="position: absolute; left: -260px; top: 0; width: 220px; height: 100%; z-index: 10;"></div>
+              <div class="demo-lang-selector" id="demo-lang-selector">
+                <div class="lang-row">
+                  <span class="lang-label">Source</span>
+                  <span data-lang-in="zh">Chinese</span>
+                  <span data-lang-in="it" class="active">Italiano</span>
+                  <span data-lang-in="en">English</span>
+                  <span data-lang-in="fr">Français</span>
+                </div>
+                <div class="lang-row">
+                  <span class="lang-label">Target</span>
+                  <span data-lang-out="zh">Chinese</span>
+                  <span data-lang-out="en" class="active">English</span>
+                  <span data-lang-out="it">Italiano</span>
+                  <span data-lang-out="fr">Français</span>
+                </div>
+              </div>
               <span class="demo-text" id="demo-text">Benvenuti a usare dimmi, sono l'autore Marco.</span>
               <article class="translation-card demo-translation-card" id="demo-bubble">
                 <header class="translation-header">
