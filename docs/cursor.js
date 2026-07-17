@@ -29,22 +29,22 @@
   const DOWNLOAD_LABEL = "download me";
   const DOWNLOAD_SELECTOR = '[data-site-link="release"]';
   
-  const REPO_LABEL = "codice";
+  const REPO_LABEL = "code";
   const REPO_SELECTOR = '[data-site-link="repository"]';
 
-  const MUOVERE_LABEL = "muovere";
+  const MUOVERE_LABEL = "move";
   const DRAG_SELECTOR = ".showcase-label";
 
-  const SCOPRI_LABEL = "scopri";
+  const SCOPRI_LABEL = "explore";
   const FEATURE_SELECTOR = ".feature-card";
 
-  const FLUSSO_LABEL = "flusso";
+  const FLUSSO_LABEL = "workflow";
   const WORKFLOW_SELECTOR = ".workflow-grid li";
 
-  const PRIVATO_LABEL = "privato";
+  const PRIVATO_LABEL = "privacy";
   const PRIVACY_SELECTOR = ".privacy-points li";
 
-  const LEGGI_LABEL = "leggi";
+  const LEGGI_LABEL = "read";
   const FAQ_SELECTOR = ".faq-list summary";
 
   const ARROW_FILL = "#FDF6EA";                 // 奶白，暗底上亮、亮底靠描边+投影可见
@@ -135,7 +135,7 @@
     } else if (newMode === "leggi") {
       text = LEGGI_LABEL;
     } else if (newMode === "click") {
-      text = "clicca";
+      text = "click";
       bg = "rgba(255, 255, 255, 0.9)";
       color = "#3A322F";
       border = "1px solid rgba(255, 255, 255, 0.4)";

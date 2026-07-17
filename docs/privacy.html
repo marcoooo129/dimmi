@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>隐私说明 — dimmi</title>
-  <meta name="description" content="了解 dimmi 如何处理选中文本、模型请求、API Key、翻译历史和辅助功能权限。">
+  <title>Privacy Policy — dimmi</title>
+  <meta name="description" content="Learn how dimmi handles selected text, model requests, API Keys, translation history, and accessibility permissions.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#211a17">
   <link rel="icon" type="image/png" href="assets/marketing/app-icon.png">
@@ -15,20 +15,20 @@
   <script defer src="cursor.js"></script>
 </head>
 <body class="legal-page">
-  <a class="skip-link" href="#privacy-content">跳到隐私说明</a>
+  <a class="skip-link" href="#privacy-content">Skip to Privacy Policy</a>
 
   <div class="review-banner" data-review-banner role="status">
-    本地审阅稿 · 正式发布前将补充生效日期与仓库联系渠道
+    Local Review Build · Effective date and repository contacts will be added before official release
   </div>
 
   <header class="site-header">
-    <nav class="nav container" aria-label="隐私页导航">
-      <a class="brand" href="index.html" aria-label="返回 dimmi 首页">
+    <nav class="nav container" aria-label="Privacy page navigation">
+      <a class="brand" href="index.html" aria-label="Return to dimmi home">
         <img src="assets/marketing/brand-mark.png" alt="" width="34" height="34">
         <span>dimmi</span>
       </a>
       <div class="nav-actions">
-        <a class="button button-ghost button-small" href="index.html">返回产品页</a>
+        <a class="button button-ghost button-small" href="index.html">Back to Product Page</a>
       </div>
     </nav>
   </header>
@@ -36,95 +36,95 @@
   <main class="legal-main container" id="privacy-content">
     <header class="legal-hero">
       <p class="eyebrow">Privacy, plainly stated</p>
-      <h1>隐私说明</h1>
+      <h1>Privacy Policy</h1>
       <p>
-        这是 dimmi v0.1.0 Beta 的透明数据说明。正式发布前会根据最终签名、存储方案和 GitHub 仓库信息更新生效日期。
+        This is a transparent data statement for dimmi v0.1.0 Beta. The effective date will be updated upon official release based on final signatures, storage solutions, and GitHub repository info.
       </p>
     </header>
 
     <article class="legal-card">
       <section>
-        <h2>一句话版本</h2>
+        <h2>The TL;DR Version</h2>
         <p>
-          dimmi 没有自建翻译服务器，也没有遥测或广告 SDK。你的翻译请求由这台 Mac 直接发送给你选择的模型服务商或自定义端点；翻译历史和解析缓存在本机。
+          dimmi has no self-hosted translation servers, nor telemetry or advertising SDKs. Your translation requests are sent directly from your Mac to your chosen model provider or custom endpoint. Translation history and analysis cache are kept strictly on your local device.
         </p>
       </section>
 
       <section>
-        <h2>dimmi 会处理哪些数据</h2>
-        <h3>你复制或选中的文字</h3>
+        <h2>Data Processed by dimmi</h2>
+        <h3>Text You Copy or Select</h3>
         <p>
-          自动翻译开启时，符合最少/最多字符条件的新复制文本，或你在划词模式下主动选中的文本，会作为翻译请求发送给所选模型。
+          When auto-translate is on, new copied text matching the character length conditions, or text you actively select in selection mode, will be sent as translation requests to your chosen model.
         </p>
 
-        <h3>译文与表达解析</h3>
+        <h3>Translations & Phrase Analysis</h3>
         <p>
-          开启表达解析后，原文与主译文会用于向同一模型服务发起额外请求，以生成短语拆解、用法说明和例句。
+          When phrase analysis is enabled, the source text and main translation are used in an additional request to the same model provider to generate phrase breakdowns, usage context, and examples.
         </p>
 
-        <h3>API 配置</h3>
+        <h3>API Configurations</h3>
         <p>
-          服务商、模型 ID、Base URL 与 API Key 保存在本机应用偏好中。当前 Beta 版尚未使用 macOS Keychain 加密 API Key，请勿在共享 macOS 账户中保存高敏感度密钥。
+          Provider selection, Model IDs, Base URLs, and API Keys are saved in local app preferences. The current Beta version does not yet encrypt API Keys via macOS Keychain. Please do not save highly sensitive keys on shared macOS accounts.
         </p>
       </section>
 
       <section>
-        <h2>数据保存在哪里</h2>
+        <h2>Where Data is Stored</h2>
         <ul>
-          <li>翻译历史：保存在本机 SwiftData 数据库。</li>
-          <li>表达解析缓存：保存在 <code>~/Library/Application Support/dimmi/notes.json</code>，其中可能包含原文与译文。</li>
-          <li>设置与 API 配置：保存在当前 macOS 用户的应用偏好中。</li>
-          <li>dimmi 当前没有账户系统、云同步或跨设备上传。</li>
+          <li>Translation History: Stored in a local SwiftData database.</li>
+          <li>Phrase Analysis Cache: Stored in <code>~/Library/Application Support/dimmi/notes.json</code>, which may contain source text and translations.</li>
+          <li>Settings & API Configurations: Stored in the current macOS user's app preferences.</li>
+          <li>dimmi currently has no account system, cloud sync, or cross-device uploads.</li>
         </ul>
         <p class="legal-notice">
-          清空“历史记录”只会清除历史数据库；解析缓存需要在“翻译设置 → 缓存管理”中单独清理。
+          Clearing "History" only clears the history database; the analysis cache must be cleared separately in "Translation Settings → Cache Management".
         </p>
       </section>
 
       <section>
-        <h2>数据会发送给谁</h2>
+        <h2>Who Receives Your Data</h2>
         <p>
-          只有你选择的模型服务商或自定义端点会接收翻译请求。对应服务商如何保存和使用请求数据，取决于你与该服务商之间的条款和隐私政策。
+          Only your chosen model provider or custom endpoint receives the translation requests. How those providers store and use request data is governed by the terms and privacy policies between you and that provider.
         </p>
         <p>
-          自定义端点可以是本机服务、企业网关或互联网地址。建议优先使用 HTTPS，或仅使用你信任的本地地址。
-        </p>
-      </section>
-
-      <section>
-        <h2>系统权限</h2>
-        <h3>辅助功能</h3>
-        <p>
-          仅在你主动选择“划词模式”时使用，用于监听鼠标选择完成并读取选中文字。默认“复制模式”不需要该权限。
-        </p>
-        <h3>剪贴板</h3>
-        <p>
-          复制模式会在本机检测剪贴板是否出现新的文本。macOS 不会为普通剪贴板读取显示独立授权弹窗。
+          Custom endpoints can be local services, corporate gateways, or internet URLs. It is recommended to use HTTPS, or use trusted local addresses only.
         </p>
       </section>
 
       <section>
-        <h2>敏感内容提醒</h2>
+        <h2>System Permissions</h2>
+        <h3>Accessibility</h3>
+        <p>
+          Used exclusively when you actively select "Selection Mode", to detect when a mouse drag is completed and to read the selected text. The default "Copy Mode" does not require this permission.
+        </p>
+        <h3>Clipboard</h3>
+        <p>
+          Copy mode monitors the local clipboard for newly added text. macOS does not show separate authorization prompts for standard clipboard reading.
+        </p>
+      </section>
+
+      <section>
+        <h2>Sensitive Content Warning</h2>
         <p class="legal-notice">
-          自动复制翻译开启时，新复制且符合触发条件的文本可能被发送给所选模型。复制密码、访问令牌、私钥或其他敏感内容前，请先从菜单栏暂停自动翻译。
+          When auto-translate on copy is enabled, newly copied text meeting the trigger conditions may be sent to the selected model. Before copying passwords, access tokens, private keys, or highly sensitive content, please pause auto-translation from the menu bar.
         </p>
       </section>
 
       <section>
-        <h2>遥测与追踪</h2>
+        <h2>Telemetry & Tracking</h2>
         <p>
-          当前源码没有集成行为分析、广告追踪、用户画像或第三方崩溃上报服务。GitHub Pages 托管本介绍页时，访问日志与基础设施数据由 GitHub 按其隐私政策处理。
+          The current source code integrates no behavioral analytics, ad tracking, user profiling, or third-party crash reporting services. When this landing page is hosted on GitHub Pages, access logs and infrastructure data are handled by GitHub according to its privacy policy.
         </p>
       </section>
 
       <section>
-        <h2>你的控制</h2>
+        <h2>Your Controls</h2>
         <ul>
-          <li>随时暂停自动翻译。</li>
-          <li>在设置中切换回无需辅助功能权限的复制模式。</li>
-          <li>在 macOS 系统设置中撤销辅助功能权限。</li>
-          <li>删除单条历史、清空全部历史，并单独清除表达解析缓存。</li>
-          <li>删除已保存的 API Key，或完全移除应用及其本机数据。</li>
+          <li>Pause auto-translation at any time.</li>
+          <li>Switch back to Copy mode in settings to stop requiring Accessibility permissions.</li>
+          <li>Revoke Accessibility permissions in macOS System Settings.</li>
+          <li>Delete single history items, clear all history, and clear the analysis cache individually.</li>
+          <li>Delete saved API Keys, or completely uninstall the app and its local data.</li>
         </ul>
       </section>
     </article>
@@ -136,8 +136,8 @@
         <img src="assets/marketing/brand-mark.png" alt="" width="30" height="30">
         <span>dimmi</span>
       </a>
-      <nav aria-label="页脚导航">
-        <a href="index.html">产品页</a>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Product Page</a>
         <a href="https://opensource.org/license/mit">License</a>
       </nav>
       <p>© <span data-current-year>2026</span> dimmi.</p>
