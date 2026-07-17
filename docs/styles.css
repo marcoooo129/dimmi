@@ -1022,6 +1022,35 @@ a {
     #201a17;
 }
 
+.section-gallery .container {
+  position: relative;
+}
+
+#lanyard-root {
+  position: absolute;
+  top: -80px;
+  right: -5%;
+  width: 50%;
+  height: 600px;
+  z-index: 20;
+  pointer-events: none;
+}
+
+#lanyard-root .lanyard-wrapper {
+  pointer-events: auto;
+}
+
+@media (max-width: 1024px) {
+  #lanyard-root {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 400px;
+    margin-top: 2rem;
+  }
+}
+
 /* ── Gallery 展示台：暖色黄昏 + 两扇倾斜浮起的应用窗口 ──────────
    设计手法沿用 hero：perspective 容器 + 分层 transform 出景深。
    两扇窗口叠放（历史在后、设置在前压其右缘），说明标签独立成层保持水平。
