@@ -52,8 +52,8 @@ body {
     linear-gradient(180deg, #4f4649 0%, #5f514c 30%, #3b302b 66%, #1e1916 100%);
   color: var(--text-primary);
   font-family:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    "Outfit", -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "SF Pro Text", "PingFang SC", "Hiragino Sans GB", sans-serif;
   font-size: 16px;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
