@@ -15,7 +15,7 @@
 ![Version](https://img.shields.io/badge/version-0.1.0%20Beta-8d7c67)
 ![License](https://img.shields.io/badge/license-MIT-6e6058)
 
-[推广页源文件](docs/index.html) · [隐私说明](PRIVACY.md) · [变更记录](CHANGELOG.md) · [上线检查](LAUNCH_CHECKLIST.md)
+[官方网站](https://marcoooo129.github.io/dimmi/) · [推广页源文件](docs/index.html) · [隐私说明](PRIVACY.md) · [变更记录](CHANGELOG.md) · [上线检查](LAUNCH_CHECKLIST.md)
 
 </div>
 
