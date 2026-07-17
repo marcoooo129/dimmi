@@ -884,12 +884,16 @@ a {
 }
 
 .demo-text {
-  color: rgba(255, 250, 242, 0.8);
-  font-family: "Geist", -apple-system, sans-serif;
-  font-size: 28px;
+  color: rgba(255, 250, 242, 0.9);
+  font-family: "Tiempos Text", "Charter", "Georgia", serif;
+  font-size: 32px;
+  line-height: 1.45;
   font-weight: 400;
-  letter-spacing: 0.01em;
+  text-align: center;
+  max-width: 85%;
+  letter-spacing: -0.01em;
   cursor: text;
+  padding: 0 20px;
 }
 
 .demo-text::selection {
