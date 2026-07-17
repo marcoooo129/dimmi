@@ -1,3 +1,6 @@
+/* 引入优雅的衬线替代字体 Playfair Display (与 Derringer 风格高度一致) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
 :root {
   color-scheme: dark;
   --brand-coral: #f27a52;
@@ -342,8 +345,8 @@ a {
 .final-cta h2,
 .legal-hero h1 {
   margin: 0;
-  font-family: "Geist", -apple-system, sans-serif;
-  font-weight: 500;
+  font-family: "Playfair Display", "Derringer Serial Regular", "Geist", -apple-system, serif;
+  font-weight: normal;
   letter-spacing: -0.02em;
   line-height: 1.04;
 }
