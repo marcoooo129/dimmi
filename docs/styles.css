@@ -334,10 +334,12 @@ a {
 .section-heading h2,
 .privacy-copy h2,
 .release-card h2,
-.final-cta h2 {
+.final-cta h2,
+.legal-hero h1 {
   margin: 0;
-  font-weight: 690;
-  letter-spacing: -0.055em;
+  font-family: "Instrument Serif", ui-serif, Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0;
   line-height: 1.04;
 }
 
@@ -447,8 +449,7 @@ a {
 }
 
 .article-copy p {
-  margin: 30px 0 0;
-  font-family: ui-serif, Georgia, serif;
+  font-family: "Instrument Serif", ui-serif, Georgia, serif;
   font-size: 20px;
   line-height: 1.72;
 }
@@ -878,9 +879,9 @@ a {
 
 .demo-text {
   color: rgba(255, 250, 242, 0.8);
-  font-family: ui-serif, Georgia, serif;
+  font-family: "Instrument Serif", ui-serif, Georgia, serif;
   font-size: 28px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   cursor: text;
 }
 
